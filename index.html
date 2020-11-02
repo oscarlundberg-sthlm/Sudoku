@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>SUDOKU</title>
+</head>
+<body>
+    <div id="content">
+        <form>
+            <div id="buttonsabove">
+                <input id="newgame" class="buttons" type="button" value="New game" onclick="location.reload()">
+            </div>
+            <br>
+            <div id="board">
+                <div id="row0" class="row">
+                    <div class="tile" id="tile0">
+                        <div id="square0" class="row0"></div>
+                    </div>
+                    <div class="tile" id="tile1">
+                        <div id="square1" class="row0"></div>
+                    </div>
+                    <div class="tile" id="tile2">
+                        <div id="square2" class="row0"></div>
+                    </div>
+                    <div class="tile" id="tile3">
+                        <div id="square3" class="row0"></div>
+                    </div>
+                    <div class="tile" id="tile4">
+                        <div id="square4" class="row0"></div>
+                    </div>
+                    <div class="tile" id="tile5">
+                        <div id="square5" class="row0"></div>
+                    </div>
+                    <div class="tile" id="tile6">
+                        <div id="square6" class="row0"></div>
+                    </div>
+                    <div class="tile" id="tile7">
+                        <div id="square7" class="row0"></div>
+                    </div>
+                    <div class="tile" id="tile8">
+                        <div id="square8" class="row0"></div>
+                    </div>
+                </div>
+                <div id="row1" class="row">
+                    <div class="tile" id="tile9">
+                        <div id="square9" class="row1"></div>
+                    </div>
+                    <div class="tile" id="tile10">
+                        <div id="square10" class="row1"></div>
+                    </div>
+                    <div class="tile" id="tile11">
+                        <div id="square11" class="row1"></div>
+                    </div>
+                    <div class="tile" id="tile12">
+                        <div id="square12" class="row1"></div>
+                    </div>
+                    <div class="tile" id="tile13">
+                        <div id="square13" class="row1"></div>
+                    </div>
+                    <div class="tile" id="tile14">
+                        <div id="square14" class="row1"></div>
+                    </div>
+                    <div class="tile" id="tile15">
+                        <div id="square15" class="row1"></div>
+                    </div>
+                    <div class="tile" id="tile16">
+                        <div id="square16" class="row1"></div>
+                    </div>
+                    <div class="tile" id="tile17">
+                        <div id="square17" class="row1"></div>
+                    </div>
+                </div>
+                <div id="row2" class="row">
+                    <div class="tile" id="tile18">
+                        <div id="square18" class="row2"></div>
+                    </div>
+                    <div class="tile" id="tile19">
+                        <div id="square19" class="row2"></div>
+                    </div>
+                    <div class="tile" id="tile20">
+                        <div id="square20" class="row2"></div>
+                    </div>
+                    <div class="tile" id="tile21">
+                        <div id="square21" class="row2"></div>
+                    </div>
+                    <div class="tile" id="tile22">
+                        <div id="square22" class="row2"></div>
+                    </div>
+                    <div class="tile" id="tile23">
+                        <div id="square23" class="row2"></div>
+                    </div>
+                    <div class="tile" id="tile24">
+                        <div id="square24" class="row2"></div>
+                    </div>
+                    <div class="tile" id="tile25">
+                        <div id="square25" class="row2"></div>
+                    </div>
+                    <div class="tile" id="tile26">
+                        <div id="square26" class="row2"></div>
+                    </div>
+                </div>
+                <div id="row3" class="row">
+                    <div class="tile" id="tile27">
+                        <div id="square27" class="row3"></div>
+                    </div>
+                    <div class="tile" id="tile28">
+                        <div id="square28" class="row3"></div>
+                    </div>
+                    <div class="tile" id="tile29">
+                        <div id="square29" class="row3"></div>
+                    </div>
+                    <div class="tile" id="tile30">
+                        <div id="square30" class="row3"></div>
+                    </div>
+                    <div class="tile" id="tile31">
+                        <div id="square31" class="row3"></div>
+                    </div>
+                    <div class="tile" id="tile32">
+                        <div id="square32" class="row3"></div>
+                    </div>
+                    <div class="tile" id="tile33">
+                        <div id="square33" class="row3"></div>
+                    </div>
+                    <div class="tile" id="tile34">
+                        <div id="square34" class="row3"></div>
+                    </div>
+                    <div class="tile" id="tile35">
+                        <div id="square35" class="row3"></div>
+                    </div>
+                </div>
+                <div id="row4" class="row">
+                    <div class="tile" id="tile36">
+                        <div id="square36" class="row4"></div>
+                    </div>
+                    <div class="tile" id="tile37">
+                        <div id="square37" class="row4"></div>
+                    </div>
+                    <div class="tile" id="tile38">
+                        <div id="square38" class="row4"></div>
+                    </div>
+                    <div class="tile" id="tile39">
+                        <div id="square39" class="row4"></div>
+                    </div>
+                    <div class="tile" id="tile40">
+                        <div id="square40" class="row4"></div>
+                    </div>
+                    <div class="tile" id="tile41">
+                        <div id="square41" class="row4"></div>
+                    </div>
+                    <div class="tile" id="tile42">
+                        <div id="square42" class="row4"></div>
+                    </div>
+                    <div class="tile" id="tile43">
+                        <div id="square43" class="row4"></div>
+                    </div>
+                    <div class="tile" id="tile44">
+                        <div id="square44" class="row4"></div>
+                    </div>
+                </div>
+                <div id="row5" class="row">
+                    <div class="tile" id="tile45">
+                        <div id="square45" class="row5"></div>
+                    </div>
+                    <div class="tile" id="tile46">
+                        <div id="square46" class="row5"></div>
+                    </div>
+                    <div class="tile" id="tile47">
+                        <div id="square47" class="row5"></div>
+                    </div>
+                    <div class="tile" id="tile48">
+                        <div id="square48" class="row5"></div>
+                    </div>
+                    <div class="tile" id="tile49">
+                        <div id="square49" class="row5"></div>
+                    </div>
+                    <div class="tile" id="tile50">
+                        <div id="square50" class="row5"></div>
+                    </div>
+                    <div class="tile" id="tile51">
+                        <div id="square51" class="row5"></div>
+                    </div>
+                    <div class="tile" id="tile52">
+                        <div id="square52" class="row5"></div>
+                    </div>
+                    <div class="tile" id="tile53">
+                        <div id="square53" class="row5"></div>
+                    </div>
+                </div>
+                <div id="row6" class="row">
+                    <div class="tile" id="tile54">
+                        <div id="square54" class="row6"></div>
+                    </div>
+                    <div class="tile" id="tile55">
+                        <div id="square55" class="row6"></div>
+                    </div>
+                    <div class="tile" id="tile56">
+                        <div id="square56" class="row6"></div>
+                    </div>
+                    <div class="tile" id="tile57">
+                        <div id="square57" class="row6"></div>
+                    </div>
+                    <div class="tile" id="tile58">
+                        <div id="square58" class="row6"></div>
+                    </div>
+                    <div class="tile" id="tile59">
+                        <div id="square59" class="row6"></div>
+                    </div>
+                    <div class="tile" id="tile60">
+                        <div id="square60" class="row6"></div>
+                    </div>
+                    <div class="tile" id="tile61">
+                        <div id="square61" class="row6"></div>
+                    </div>
+                    <div class="tile" id="tile62">
+                        <div id="square62" class="row6"></div>
+                    </div>
+                </div>
+                <div id="row7" class="row">
+                    <div class="tile" id="tile63">
+                        <div id="square63" class="row7"></div>
+                    </div>
+                    <div class="tile" id="tile64">
+                        <div id="square64" class="row7"></div>
+                    </div>
+                    <div class="tile" id="tile65">
+                        <div id="square65" class="row7"></div>
+                    </div>
+                    <div class="tile" id="tile66">
+                        <div id="square66" class="row7"></div>
+                    </div>
+                    <div class="tile" id="tile67">
+                        <div id="square67" class="row7"></div>
+                    </div>
+                    <div class="tile" id="tile68">
+                        <div id="square68" class="row7"></div>
+                    </div>
+                    <div class="tile" id="tile69">
+                        <div id="square69" class="row7"></div>
+                    </div>
+                    <div class="tile" id="tile70">
+                        <div id="square70" class="row7"></div>
+                    </div>
+                    <div class="tile" id="tile71">
+                        <div id="square71" class="row7"></div>
+                    </div>
+                </div>
+                <div id="row8" class="row">
+                    <div class="tile" id="tile72">
+                        <div id="square72" class="row8"></div>
+                    </div>
+                    <div class="tile" id="tile73">
+                        <div id="square73" class="row8"></div>
+                    </div>
+                    <div class="tile" id="tile74">
+                        <div id="square74" class="row8"></div>
+                    </div>
+                    <div class="tile" id="tile75">
+                        <div id="square75" class="row8"></div>
+                    </div>
+                    <div class="tile" id="tile76">
+                        <div id="square76" class="row8"></div>
+                    </div>
+                    <div class="tile" id="tile77">
+                        <div id="square77" class="row8"></div>
+                    </div>
+                    <div class="tile" id="tile78">
+                        <div id="square78" class="row8"></div>
+                    </div>
+                    <div class="tile" id="tile79">
+                        <div id="square79" class="row8"></div>
+                    </div>
+                    <div class="tile" id="tile80">
+                        <div id="square80" class="row8"></div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div id="buttonsbelowdiv">
+                <input id="showsolution" class="buttons" type="button" value="Show solution" onclick="showSolution()">
+                <input id="checkyouranswer" class="buttons" type="button" value="Submit your answer" onclick="checkYourAnswer()">
+            </div>
+        </form>
+    </div>
+    <script src="js/sudokugame.js"></script>
+    <script src="js/responsiveness.js"></script>
+</body>
+</html>

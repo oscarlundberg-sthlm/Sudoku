@@ -1,0 +1,17 @@
+1:a rutan: jag slumpar ett nummer mellan 1-9
+
+2:a rutan: jag kollar på sektionen, raden och kolumnen rutan tillhör 
+för att se vilka nummer av 1-9 som finns kvar.
+Av de nummer som finns kvar slumpar jag ett nummer och skriver in.
+
+3:e till sista rutan: repetition av 2:a rutan.
+
+
+--------------------------------------------------------
+
+välj första talet ifrån en array med 1-9
+lägg in på slumpmässig plats i sektion 1
+lägg in samma nummer på slumpmässig plats i sektion 2, så länge rad och kolumn inte innehåller numret
+fortsätt till och med sektion 9
+slicea bort första talet från arrayen
+börja om
