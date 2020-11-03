@@ -60,11 +60,7 @@ body {
 #row5 {
     border-bottom: 2px solid rgb(51, 51, 51);
 }
-#buttonsabove {
-    display: flex;
-    justify-content: flex-end;
-}
-#buttonsbelowdiv {
+#buttonsbelowdiv, #buttonsabove{
     display: flex;
     justify-content: space-between;
 }
