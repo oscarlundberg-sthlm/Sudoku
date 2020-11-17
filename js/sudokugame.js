@@ -1,40 +1,40 @@
 "use strict";
+var x = "."; //  Ska ersättas med en siffra mellan 1-9 på 9 ställen varje loop
+var a = "a"; //  Available
+var b = "b"; //  Busy, temporärt unavailable
+var c = "c"; //  Column, unavailable hela kolumnen
+var d = "d"; //  Temporary placeholder
+var e = "e"; //  Used by number already
+
+var boardRef = [
+    [[a], [a], [a], [a], [a], [a], [a], [a], [a]],
+    [[a], [a], [a], [a], [a], [a], [a], [a], [a]],
+    [[a], [a], [a], [a], [a], [a], [a], [a], [a]],
+    [[a], [a], [a], [a], [a], [a], [a], [a], [a]],
+    [[a], [a], [a], [a], [a], [a], [a], [a], [a]],
+    [[a], [a], [a], [a], [a], [a], [a], [a], [a]],
+    [[a], [a], [a], [a], [a], [a], [a], [a], [a]],
+    [[a], [a], [a], [a], [a], [a], [a], [a], [a]],
+    [[a], [a], [a], [a], [a], [a], [a], [a], [a]]
+];
+
+var boardFin = [
+    [[x], [x], [x], [x], [x], [x], [x], [x], [x]],
+    [[x], [x], [x], [x], [x], [x], [x], [x], [x]],
+    [[x], [x], [x], [x], [x], [x], [x], [x], [x]],
+    [[x], [x], [x], [x], [x], [x], [x], [x], [x]],
+    [[x], [x], [x], [x], [x], [x], [x], [x], [x]],
+    [[x], [x], [x], [x], [x], [x], [x], [x], [x]],
+    [[x], [x], [x], [x], [x], [x], [x], [x], [x]],
+    [[x], [x], [x], [x], [x], [x], [x], [x], [x]],
+    [[x], [x], [x], [x], [x], [x], [x], [x], [x]]
+];
 //  Generate Level
 function generateGame(level) {
     for (let i = 0; i < 81; i++) {
         let htmlSquare = document.getElementById("square" + i);
         htmlSquare.innerHTML = "";
     }
-    var x = "."; //  Ska ersättas med en siffra mellan 1-9 på 9 ställen varje loop
-    var a = "a"; //  Available
-    var b = "b"; //  Busy, temporärt unavailable
-    var c = "c"; //  Column, unavailable hela kolumnen
-    var d = "d"; //  Temporary placeholder
-    var e = "e"; //  Used by number already
-
-    var boardRef = [
-        [[a], [a], [a], [a], [a], [a], [a], [a], [a]],
-        [[a], [a], [a], [a], [a], [a], [a], [a], [a]],
-        [[a], [a], [a], [a], [a], [a], [a], [a], [a]],
-        [[a], [a], [a], [a], [a], [a], [a], [a], [a]],
-        [[a], [a], [a], [a], [a], [a], [a], [a], [a]],
-        [[a], [a], [a], [a], [a], [a], [a], [a], [a]],
-        [[a], [a], [a], [a], [a], [a], [a], [a], [a]],
-        [[a], [a], [a], [a], [a], [a], [a], [a], [a]],
-        [[a], [a], [a], [a], [a], [a], [a], [a], [a]]
-    ];
-
-    var boardFin = [
-        [[x], [x], [x], [x], [x], [x], [x], [x], [x]],
-        [[x], [x], [x], [x], [x], [x], [x], [x], [x]],
-        [[x], [x], [x], [x], [x], [x], [x], [x], [x]],
-        [[x], [x], [x], [x], [x], [x], [x], [x], [x]],
-        [[x], [x], [x], [x], [x], [x], [x], [x], [x]],
-        [[x], [x], [x], [x], [x], [x], [x], [x], [x]],
-        [[x], [x], [x], [x], [x], [x], [x], [x], [x]],
-        [[x], [x], [x], [x], [x], [x], [x], [x], [x]],
-        [[x], [x], [x], [x], [x], [x], [x], [x], [x]]
-    ];
 
     // Syntax board[row][square][state of square]
 
@@ -336,7 +336,7 @@ function showSolution() {
 }
 
 let levelbutton = document.getElementById("levelsbutton");
-levelbutton.addEventListener("click", function(){
+levelbutton.addEventListener("click", function() {
 
     //  Level-chooser container
     let levelchooser = document.createElement("div");
@@ -378,7 +378,7 @@ levelbutton.addEventListener("click", function(){
 
 //  Check if correct
 let checkYourAnswerButton = document.getElementById("checkyouranswer");
-checkYourAnswerButton.addEventListener("click", () => checkYourAnswer());
+checkYourAnswerButton.addEventListener("click", () => {     checkYourAnswer()    });
 
 function checkYourAnswer() {
     let squareIndex = 0;

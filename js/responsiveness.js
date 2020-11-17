@@ -1,16 +1,17 @@
-let availableWidth = window.innerWidth;
-let availableHeight = window.innerHeight;
-let contentWidth = document.querySelector("form").offsetWidth;
-let contentHeight = document.querySelector("form").offsetHeight;
+let padding = getComputedStyle(document.querySelector("body")).padding;
+padding = parseInt(padding);
+padding *= 2;
 
-let scale = Math.min( 
-    availableWidth / contentWidth, 
-    availableHeight / contentHeight 
-);
+let availableWidth = document.body.clientWidth;
+availableWidth -= padding;
 
-if (scale > 1) {
-    scale *= 0.9;
-}
-
-let form = document.querySelector("form");
-form.style.transform = `scale(${scale})`;
+window.onload = function() {
+    let content = document.querySelector("#content");
+    let contentWidth = document.querySelector("#content").offsetWidth;
+    let scale = availableWidth / contentWidth;
+    
+    if (contentWidth > availableWidth) {
+        content.style.transform = `scale(${scale})`;
+        content.style.transformOrigin = "top left";
+    }
+};
