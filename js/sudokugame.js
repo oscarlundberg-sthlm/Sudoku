@@ -393,6 +393,7 @@ function clearColor() {
     for (let tile of tiles) {
         tile.style.backgroundColor = "";
     }
+    document.getElementById("board").style.backgroundColor = "";
 }
 
 
