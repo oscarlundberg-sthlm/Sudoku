@@ -340,9 +340,14 @@ let selectedLevel = 30;
 let levelbutton = document.getElementById("levelsbutton");
 levelbutton.addEventListener("click", function() {
 
+    if (document.getElementById("levelchooser")) {
+        return;
+    }
+
     //  Level-chooser container
     let levelchooser = document.createElement("div");
     levelchooser.style.backgroundColor = "white";
+    levelchooser.style.border = "2px solid black";
     levelchooser.style.position = "absolute";
     levelchooser.style.zIndex = "10";
     levelchooser.style.padding = "10px";
@@ -353,10 +358,15 @@ levelbutton.addEventListener("click", function() {
     levelchooser.style.height = "300px";
     levelchooser.style.width = "150px";
     levelchooser.style.overflow = "scroll";
-    levelchooser.style.filter = "drop-shadow(-4px 6px 4px rgb(58, 58, 58))";
+    levelchooser.style.filter = "drop-shadow(0px 30px 20px rgba(0, 0, 0, 0.582)";
     levelchooser.style.textAlign = "center";
     levelchooser.setAttribute("id", "levelchooser");
     document.querySelector("form").appendChild(levelchooser);
+
+    let toBlur = document.querySelectorAll("form div:not(#levelchooser)");
+    for (let element of toBlur) {
+        element.style.filter = "blur(2px)";
+    }
 
     // Generate level-buttons and level
     for (let i = 1; i <= 80; i++) {
@@ -371,12 +381,29 @@ levelbutton.addEventListener("click", function() {
         this.parentNode.remove();
         selectedLevel = i;
         clearColor();
+        for (let element of toBlur) {
+            element.style.filter = "";
+        }
         return generateGame(i);
     });
     document.getElementById("levelchooser").appendChild(levelOption);
     }
-
 });
+
+// Enabling closing of levels-popup
+window.addEventListener("click", (e) => {
+    if (e.target === document.getElementById("levelchooser") || e.target === levelbutton) {
+        return;
+    } else if (document.getElementById("levelchooser")) {
+        let toBlur = document.querySelectorAll("form div:not(#levelchooser)");
+        for (let element of toBlur) {
+            element.style.filter = "";
+        }
+        document.getElementById("levelchooser").remove();
+    } else {
+        return;
+    }
+})
 
 //  Generate a game at entry
 generateGame(selectedLevel);
