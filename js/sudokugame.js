@@ -335,6 +335,8 @@ function showSolution() {
     }
 }
 
+//  LEVELS
+let selectedLevel = 30;
 let levelbutton = document.getElementById("levelsbutton");
 levelbutton.addEventListener("click", function() {
 
@@ -356,7 +358,7 @@ levelbutton.addEventListener("click", function() {
     levelchooser.setAttribute("id", "levelchooser");
     document.querySelector("form").appendChild(levelchooser);
 
-    // Generate level-buttons
+    // Generate level-buttons and level
     for (let i = 1; i <= 80; i++) {
     let levelOption = document.createElement("input");
     levelOption.setAttribute("type", "button");
@@ -367,6 +369,8 @@ levelbutton.addEventListener("click", function() {
     levelOption.style.width = "100%";
     levelOption.addEventListener("click", function(){
         this.parentNode.remove();
+        selectedLevel = i;
+        clearColor();
         return generateGame(i);
     });
     document.getElementById("levelchooser").appendChild(levelOption);
@@ -374,6 +378,22 @@ levelbutton.addEventListener("click", function() {
 
 });
 
+//  Generate a game at entry
+generateGame(selectedLevel);
+
+// New game
+let newGameBtn = document.getElementById("newgame");
+newGameBtn.addEventListener("click", () => {
+    clearColor();
+    generateGame(selectedLevel);
+});
+
+function clearColor() {
+    let tiles = document.getElementsByClassName("tile");
+    for (let tile of tiles) {
+        tile.style.backgroundColor = "";
+    }
+}
 
 
 //  Check if correct
